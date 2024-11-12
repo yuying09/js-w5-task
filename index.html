@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- bootstrap icon -->
+<!-- 使用 UNPKG 提供的 Bootstrap Icons CDN -->
+<link href="https://unpkg.com/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <section class="add-ticket-box">
+      <div class="row">
+        <div class="col">
+          <img src="./images/main_img.png" alt="main_img" style="width: 350px; height: 250px; margin-bottom: 21px;">
+          <img src="./images/logo.png" alt="logo" style="width: 350px; height: 235px;">
+        </div>
+        <div class="col">
+          <div class="d-flex title-border">
+            <i class="bi bi-plus-circle align-self-center" style="font-size: 20px; margin-right: 6px;"></i>        
+            <h2 class="fw-bold" style="font-size: 24px;">新增旅遊套票</h2>
+          </div>
+          <form>
+            <div class="row add-ticket-form">
+              <label for="ticket-name" class="col-4 col-form-label ">套票名稱</label>
+              <div class="col-8"><input name="套票名稱" type="text" id="ticket-name" placeholder="請填寫套票名稱" class="col-form-input"></div>
+            </div>
+            <div class="row add-ticket-form">
+              <label for="img-src" class="col-4 col-form-label ">圖片網址</label>
+              <div class="col-8"><input name="圖片網址" type="text" id="img-src" placeholder="請填寫圖片網址" class="col-form-input"></div>
+            </div>
+            <div class="row add-ticket-form">
+              <label for="sight-region" class="col-4 col-form-label ">景點地區</label>
+              <div class="col-8"><select name="景點地區" id="sight-region"  class="col-form-input" >
+                <option value="" disabled selected hidden>請選擇景點地區</option>
+                <option value="台北">台北</option>
+                <option value="台中">台中</option>
+                <option value="高雄">高雄</option>
+              </select></div>
+            </div>
+            <div class="row add-ticket-form">
+              <label for="ticket-cost" class="col-4 col-form-label ">套票金額</label>
+              <div class="col-8"><input name="套票金額" type="number" id="ticket-cost" placeholder="請填寫套票金額" class="col-form-input" min="1000" step="500"></div>
+            </div>
+            <div class="row add-ticket-form">
+              <label for="ticket-cost" class="col-4 col-form-label ">套票組數</label>
+              <div class="col-8"><input name="套票組數" type="number" id="ticket-cost" placeholder="請填寫套票組數" class="col-form-input" min="1"></div>
+            </div>
+            <div class="row add-ticket-form">
+              <label for="ticket-rank" class="col-4 col-form-label ">套票星級</label>
+              <div class="col-8"><input type="number" id="ticket-rank" placeholder="請填寫套票星級" class="col-form-input" min="1" max="10"></div>
+            </div>
+            <div class="row add-ticket-form">
+              <label for="ticket-desc" class="col-4 col-form-label ">套票名稱</label>
+              <div class="col-8"><textarea name="套票名稱" id="ticket-desc" placeholder="請填寫套票描述（限 100 字）"></textarea></div>
+            </div>
+          </form>
+      </div>
+      </div>
+      
+    </section>
+  </div>
+  <section class="bottom-section">
+  <div class="container-fluid ticket-section">
+    <div class="d-flex ">
+      <select name="景點地區" id="sight-region"  class="sight-region-select" style="margin-right: 30px;">
+        <option value="" disabled selected hidden>地區選擇</option>
+        <option value="台北">台北</option>
+        <option value="台中">台中</option>
+        <option value="高雄">高雄</option>
+      </select>
+      <p style="color:#818A91; margin-bottom: 0px;" class="align-self-end">本次搜尋共 6 筆資料</p>
+    </div>
+    
+    <!-- 卡片區域開始 -->
+    <section class="card-section">
+    <div class="container-fluid">
+    <div class="row">
+      
+      <!-- 第1張卡 -->
+      <div class="col-4 mb-38" >
+        <div class="card" >
+          <div class="position-relative">
+            <img src="./images/travel_1.png" class="card-img-top" alt="潛水">
+            <div class="region-tag position-absolute top-0 start-0  ">台北</div>
+            <div class="rank-tag position-absolute top-100 start-0">8.6</div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title card-title-border" style="color: #00807E;">綠島自由行套裝行程</h5>
+            <p class="card-text">嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。</p>
+            <div class="d-flex justify-content-between">
+              <div class="last-num d-flex align-items-center">
+                <i class="bi bi-exclamation-circle-fill " style="margin-right: 4px;"></i>
+                <p class="fw-bold " style="margin-bottom: 0;">剩下最後<span id="card-last-num">8</span>組</p>
+              </div>
+              <div class="price d-flex">
+                <p style="margin-right: 4px;">TWD
+                  <span id="card-price" style="font-size: 32px;" class="fw-bold">1,280</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第2張卡 -->
+      <div class="col-4  mb-38">
+        <div class="card " >
+          <div class="position-relative">
+            <img src="./images/travel_2 .png" class="card-img-top" alt="潛水">
+            <div class="region-tag position-absolute top-0 start-0  ">台北</div>
+            <div class="rank-tag position-absolute top-100 start-0">8.2</div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title card-title-border" style="color: #00807E;">清境高空觀景步道二日遊</h5>
+            <p class="card-text">清境農場青青草原數十公頃碧草，餵食著數以百計的綿羊和牛群，中央山脈最高的北三段群峰形成一堵如帶的高牆，攔住清晨的薄霧山嵐，成就了從花蓮翻山而來的雲瀑在濁水溪谷積成雲海，這些景觀豐沛了清境觀景步道的風格，也涵養它無可取代的特色。</p>
+            <div class="d-flex justify-content-between">
+              <div class="last-num d-flex align-items-center">
+                <i class="bi bi-exclamation-circle-fill " style="margin-right: 4px;"></i>
+                <p class="fw-bold " style="margin-bottom: 0;">剩下最後<span id="card-last-num">12</span>組</p>
+              </div>
+              <div class="price d-flex">
+                <p style="margin-right: 4px;">TWD
+                  <span id="card-price" style="font-size: 32px;" class="fw-bold">2,580</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--第3張卡  -->
+      <div class="col-4  mb-38">
+        <div class="card " >
+          <div class="position-relative">
+            <img src="./images/travel_3 .png" class="card-img-top" alt="潛水">
+            <div class="region-tag position-absolute top-0 start-0  ">台中</div>
+            <div class="rank-tag position-absolute top-100 start-0">9.2</div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title card-title-border" style="color: #00807E;">南庄度假村露營車二日遊</h5>
+            <p class="card-text">南庄雲水豪華露營車，快來擁有最愜意的露營體驗吧！ 一泊一食，輕鬆享受露營車樂趣。 獨立衛浴與私人戶外露臺。 入住豪華露營車還能使用戶外SPA大眾湯，感受美人湯魅力。</p>
+            <div class="d-flex justify-content-between">
+              <div class="last-num d-flex align-items-center">
+                <i class="bi bi-exclamation-circle-fill " style="margin-right: 4px;"></i>
+                <p class="fw-bold " style="margin-bottom: 0;">剩下最後<span id="card-last-num">2</span>組</p>
+              </div>
+              <div class="price d-flex">
+                <p style="margin-right: 4px;">TWD
+                  <span id="card-price" style="font-size: 32px;" class="fw-bold">2,480</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--第4張卡  -->
+      <div class="col-4  mb-38">
+        <div class="card " >
+          <div class="position-relative">
+            <img src="./images/travel_4.png" class="card-img-top" alt="潛水">
+            <div class="region-tag position-absolute top-0 start-0  ">台中</div>
+            <div class="rank-tag position-absolute top-100 start-0">9.3</div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title card-title-border" style="color: #00807E;">山林悠遊雙人套票</h5>
+            <p class="card-text">山林悠遊套票，結合南投清境高空步道、雙龍瀑布七彩吊橋、瑞龍瀑布園區之熱門景點，帶您飽覽南投瑰麗的自然環境，體驗變化無窮的地形景觀，喜歡挑戰高空的您一定不可錯過。 （含雙龍瀑布入場券 x2）</p>
+            <div class="d-flex justify-content-between">
+              <div class="last-num d-flex align-items-center">
+                <i class="bi bi-exclamation-circle-fill " style="margin-right: 4px;"></i>
+                <p class="fw-bold " style="margin-bottom: 0;">限時搶購</p>
+              </div>
+              <div class="price d-flex">
+                <p style="margin-right: 4px;">TWD
+                  <span id="card-price" style="font-size: 32px;" class="fw-bold">880</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--第5張卡  -->
+      <div class="col-4  mb-38">
+        <div class="card " >
+          <div class="position-relative">
+            <img src="./images/travel_5 .png" class="card-img-top" alt="潛水">
+            <div class="region-tag position-absolute top-0 start-0  ">台中</div>
+            <div class="rank-tag position-absolute top-100 start-0">8.2</div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title card-title-border" style="color: #00807E;">漁樂碼頭釣魚體驗套票</h5>
+            <p class="card-text">台中全新親子景點寶熊漁樂碼頭，為知名釣具公司「OKUMA」所創立的觀光工廠。一樓藍白希臘漁村風商店街免費參觀。二樓釣魚故事館則設立全台唯一虛擬釣場，透過導覽讓你知道如何釣魚、魚餌怎麼區分，寓教於樂的台中景點！</p>
+            <div class="d-flex justify-content-between">
+              <div class="last-num d-flex align-items-center">
+                <i class="bi bi-exclamation-circle-fill " style="margin-right: 4px;"></i>
+                <p class="fw-bold " style="margin-bottom: 0;">剩下最後<span id="card-last-num">5</span>組</p>
+              </div>
+              <div class="price d-flex">
+                <p style="margin-right: 4px;">TWD
+                  <span id="card-price" style="font-size: 32px;" class="fw-bold">1,280</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--第6張卡  -->
+      <div class="col-4  mb-38">
+        <div class="card " >
+          <div class="position-relative">
+            <img src="./images/travel_6.png" class="card-img-top" alt="潛水">
+            <div class="region-tag position-absolute top-0 start-0  ">高雄</div>
+            <div class="rank-tag position-absolute top-100 start-0">8.6</div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title card-title-border" style="color: #00807E;">熊森公園親子二日遊套票</h5>
+            <p class="card-text">來自日本最受歡迎的兒童遊樂園《 BearSon Park 熊森公園》於全世界有800多家據點，在全世界、日本及台灣，很多小孩的童年都在遊戲愛樂園裡一同成長，提供兒童一個最富教育性及娛樂性的休憩遊樂天地！</p>
+            <div class="d-flex justify-content-between">
+              <div class="last-num d-flex align-items-center">
+                <i class="bi bi-exclamation-circle-fill " style="margin-right: 4px;"></i>
+                <p class="fw-bold " style="margin-bottom: 0;">剩下最後<span id="card-last-num">3</span>組</p>
+              </div>
+              <div class="price d-flex">
+                <p style="margin-right: 4px;">TWD
+                  <span id="card-price" style="font-size: 32px;" class="fw-bold">2,480</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    </section>
+
+
+    <!-- bootstrap icon -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
